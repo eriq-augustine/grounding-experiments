@@ -49,7 +49,7 @@ function run() {
             local queryFile="${THIS_DIR}/sql/${query}-${groundingMethod}.sql"
             local outFile="${outDir}/${query}-${groundingMethod}.txt"
 
-            echo -e "EXPLAIN (ANALYZE, BUFFERS, COSTS, SUMMARY, VERBOSE, FORMAT JSON)\n$(cat $queryFile)" | psql -qAt $DATABASE > "${outFile}"
+            echo -e "EXPLAIN (ANALYZE, BUFFERS, COSTS, VERBOSE, FORMAT JSON)\n$(cat $queryFile)" | psql -qAt $DATABASE > "${outFile}"
          done
       done
    done
