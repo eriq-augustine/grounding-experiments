@@ -41,7 +41,7 @@ function run() {
 
          # Generate the sparse data.
          if [ ! -e "${THIS_DIR}/data/sparse/${runId}" ]; then
-            ruby $SPARSE_GEN_SCRIPT $baseDataDir $sparseDataDir $(echo "print ($falsePercent / 100.0)" | ruby)
+            ruby $SPARSE_GEN_SCRIPT $baseDataDir $sparseDataDir $(echo "print ('$falsePercent'.to_i() / 100.0)" | ruby)
          fi
 
          # PSL
