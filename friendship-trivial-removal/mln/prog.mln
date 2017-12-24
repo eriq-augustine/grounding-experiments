@@ -1,0 +1,8 @@
+// Closed predicates
+*Similar(person, person)
+
+// Target predicate
+Friends(person, person)
+
+// Rules
+10 Similar(p1, p2) => Friends(p1, p2)

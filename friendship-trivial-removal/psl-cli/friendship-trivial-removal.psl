@@ -1,0 +1,1 @@
+10: Similar(P1, P2) & P1 != P2 -> Friends(P1, P2) ^2

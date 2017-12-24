@@ -1,0 +1,12 @@
+predicates:
+   Similar/2: closed
+   Friends/2: open
+
+observations:
+   Similar: data/sparse/__fold__/similar_obs.txt
+
+targets:
+   Friends: data/sparse/__fold__/friends_targets.txt
+
+truth:
+   Friends: data/sparse/__fold__/friends_truth.txt
