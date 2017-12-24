@@ -1,0 +1,10 @@
+// Have no real rules because we don't actually care about the PSL program.
+// We will run individual queries.
+
+// This rule will not have any groundings (because the blocks).
+1: Block(P1, A) & Block(P1, B) & (A != B) -> Friends(A, B) ^2
+
+// These are the rules that we will be measuring.
+// 10: Block(P1, A) & Block(P2, A) & Similar(P1, P2) & P1 != P2 -> Friends(P1, P2) ^2
+// 10: Block(P1, A) & Block(P2, A) & Block(P3, A) & Friends(P1, P2) & Friends(P2, P3) & P1 != P2 & P2 != P3 & P1 != P3 -> Friends(P1, P3) ^2
+// 10: Block(P1, A) & Block(P2, A) & Friends(P1, P2) & P1 != P2 -> Friends(P2, P1) ^2
