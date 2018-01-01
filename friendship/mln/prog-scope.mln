@@ -1,0 +1,14 @@
+// Closed predicates
+*Block(person, block)
+*Similar(person, person)
+
+// Target predicate
+Friends(person, person)
+
+// Scope
+Friends(p1, p2) := Block(p1, a), Block(p2, a) .
+
+// Rules
+10 Similar(p1, p2) => Friends(p1, p2)
+10 Friends(p1, p2), Friends(p2, p3) => Friends(p1, p3)
+10 Friends(p1, p2) => Friends(p2, p1)
